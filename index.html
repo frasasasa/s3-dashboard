@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>S3 — Reporte Abril 2026</title>
+<title>S3 — Reporte Mayo 2026</title>
 <script>/*!
  * Chart.js v4.4.1
  * https://www.chartjs.org
@@ -183,7 +183,7 @@
     <h1>Inversiones S3</h1>
     <div style="font-size: 13px; color: var(--muted);">Inversiones y Rentas S3 Limitada</div>
   </div>
-  <div class="date">Cierre Abril 2026</div>
+  <div class="date">Cierre Mayo 2026</div>
 </div>
 
 <!-- RESUMEN EJECUTIVO -->
@@ -192,33 +192,38 @@
 <div class="metrics">
   <div class="metric">
     <div class="label">Total consolidado</div>
-    <div class="value">MM$798</div>
-    <div class="sub">USD 319,907 + BTG + BCI</div>
+    <div class="value">MM$808</div>
+    <div class="sub">USD 335,666 + BTG + BCI</div>
   </div>
   <div class="metric">
-    <div class="label">Rentabilidad Abril</div>
-    <div class="value positive">+1.97%</div>
-    <div class="sub">+MM$22.7 (sin aportes/rescates)</div>
+    <div class="label">Rentabilidad Mayo</div>
+    <div class="value positive">+1.21%</div>
+    <div class="sub">+MM$9.6 (sin aportes/rescates)</div>
   </div>
   <div class="metric">
     <div class="label">Rentabilidad YTD</div>
-    <div class="value positive">+1.50%</div>
-    <div class="sub">+MM$19.8 desde dic 2025</div>
+    <div class="value positive">+2.34%</div>
+    <div class="sub">+MM$26.7 desde dic 2025</div>
   </div>
   <div class="metric">
     <div class="label">Pershing en USD</div>
-    <div class="value positive">+6.46%</div>
-    <div class="sub">Abril / +2.88% YTD</div>
+    <div class="value positive">+4.93%</div>
+    <div class="sub">Mayo / +3.48% CLP</div>
   </div>
   <div class="metric">
     <div class="label">Tipo de cambio</div>
-    <div class="value">$903</div>
-    <div class="sub">-2.6% vs marzo ($927)</div>
+    <div class="value">$891</div>
+    <div class="sub">-1.4% vs abril ($903)</div>
+  </div>
+  <div class="metric">
+    <div class="label">Efecto Cambiario YTD</div>
+    <div class="value negative">-0.94%</div>
+    <div class="sub">Inversiones +3.28% / FX -0.94%</div>
   </div>
 </div>
 
 <div class="note-box">
-  <strong>Efecto cambiario:</strong> La cuenta Pershing rento +6.46% en dolares, pero en pesos chilenos solo +3.66% porque el CLP se aprecio 2.6% en abril. Esto reduce la rentabilidad consolidada en pesos. Es un efecto temporal — si el dolar sube, se revierte.
+  <strong>Efecto cambiario:</strong> En mayo, las inversiones rindieron +1.74% en moneda local, pero el peso se aprecio 1.4% contra el dolar (de $903 a $891), restando -0.53% al consolidado. En lo que va del año, las inversiones puras rinden +3.28%, pero el efecto cambiario ha restado -0.94%, dejando un retorno total de +2.34% en CLP.
 </div>
 
 <div class="charts-row">
@@ -241,7 +246,7 @@
 
 <div class="charts-row">
   <div class="chart-card">
-    <div class="chart-title">Rendimiento por custodio (Abril)</div>
+    <div class="chart-title">Rendimiento por custodio (Mayo)</div>
     <div class="chart-wrap"><canvas id="custodioChart"></canvas></div>
     <div class="legend">
       <span><span class="dot" style="background:#534AB7"></span>Pershing USD</span>
@@ -251,13 +256,36 @@
     </div>
   </div>
   <div class="chart-card">
-    <div class="chart-title">Top movers Abril (variacion %)</div>
+    <div class="chart-title">Top movers Mayo (variacion %)</div>
     <div class="chart-wrap"><canvas id="moversChart"></canvas></div>
     <div class="legend">
       <span><span class="dot" style="background:#1D9E75"></span>Positivo</span>
       <span><span class="dot" style="background:#E24B4A"></span>Negativo</span>
     </div>
   </div>
+</div>
+
+<div class="charts-row">
+  <div class="chart-card" style="flex:2">
+    <div class="chart-title">Atribucion de retorno mensual: Inversiones vs Efecto Cambiario</div>
+    <div class="chart-wrap"><canvas id="fxWaterfallChart"></canvas></div>
+    <div class="legend">
+      <span><span class="dot" style="background:#534AB7"></span>Retorno Inversiones</span>
+      <span><span class="dot" style="background:#D85A30"></span>Efecto Cambiario</span>
+      <span><span class="dot" style="background:transparent;border:2px solid #1D9E75"></span>Retorno Total CLP</span>
+    </div>
+  </div>
+  <div class="chart-card" style="flex:1">
+    <div class="chart-title">Tipo de cambio CLP/USD (2026)</div>
+    <div class="chart-wrap"><canvas id="fxRateChart"></canvas></div>
+    <div class="legend">
+      <span><span class="dot" style="background:#D85A30"></span>CLP/USD</span>
+    </div>
+  </div>
+</div>
+
+<div class="note-box">
+  <strong>Como leer este grafico:</strong> La barra morada muestra cuanto rindieron las inversiones en su moneda original. La barra naranja muestra cuanto sumo o resto el tipo de cambio al convertir a pesos. La linea verde es el retorno total en CLP. Por ejemplo, en abril las inversiones subieron +2.98% pero el dolar bajo 2.6% (de $927 a $903), lo que resto -1.01% al consolidado, dejando un retorno total de +1.97%.
 </div>
 
 <!-- DETALLE POR POSICION -->
@@ -275,19 +303,19 @@
   </thead>
   <tbody>
     <tr><td colspan="5" style="font-weight:500;font-size:12px;color:var(--muted);padding-top:12px">EEUU / Desarrollados</td></tr>
-    <tr><td>ETF SMH (Semiconductores)</td><td>Pershing</td><td class="right">28.83</td><td class="right">3.61%</td><td class="right"><span class="tag tag-green">+32.2%</span></td></tr>
-    <tr><td>ETF QQQ (Nasdaq 100)</td><td>Pershing</td><td class="right">25.33</td><td class="right">3.17%</td><td class="right"><span class="tag tag-green">+15.7%</span></td></tr>
-    <tr><td>Acciones BRK.B (Berkshire)</td><td>Pershing</td><td class="right">13.26</td><td class="right">1.66%</td><td class="right"><span class="tag tag-red">-1.2%</span></td></tr>
-    <tr><td>MS US Equity Growth</td><td>Pershing</td><td class="right">12.72</td><td class="right">1.59%</td><td class="right"><span class="tag tag-green">+10.6%</span></td></tr>
-    <tr><td>ETF WTAI (AI & Innovation)</td><td>Pershing</td><td class="right">10.83</td><td class="right">1.36%</td><td class="right"><span class="tag tag-green">+26.0%</span></td></tr>
-    <tr><td>ETF NLR (Uranio & Nuclear)</td><td>Pershing</td><td class="right">14.50</td><td class="right">1.82%</td><td class="right"><span class="tag tag-green">+9.6%</span></td></tr>
-    <tr><td>ETF ICOP (Cobre & Metales)</td><td>Pershing</td><td class="right">14.25</td><td class="right">1.79%</td><td class="right"><span class="tag tag-green">+4.6%</span></td></tr>
-    <tr><td>ETF CIBR (Ciberseguridad)</td><td>Pershing</td><td class="right">8.95</td><td class="right">1.12%</td><td class="right"><span class="tag tag-green">+7.6%</span></td></tr>
+    <tr><td>ETF SMH (Semiconductores)</td><td>Pershing</td><td class="right">33.61</td><td class="right">4.16%</td><td class="right"><span class="tag tag-green">+32.2%</span></td></tr>
+    <tr><td>ETF QQQ (Nasdaq 100)</td><td>Pershing</td><td class="right">27.62</td><td class="right">3.42%</td><td class="right"><span class="tag tag-green">+15.7%</span></td></tr>
+    <tr><td>Acciones BRK.B (Berkshire)</td><td>Pershing</td><td class="right">13.10</td><td class="right">1.62%</td><td class="right"><span class="tag tag-red">-1.2%</span></td></tr>
+    <tr><td>MS US Equity Growth</td><td>Pershing</td><td class="right">13.65</td><td class="right">1.69%</td><td class="right"><span class="tag tag-green">+10.6%</span></td></tr>
+    <tr><td>ETF WTAI (AI & Innovation)</td><td>Pershing</td><td class="right">13.28</td><td class="right">1.64%</td><td class="right"><span class="tag tag-green">+26.0%</span></td></tr>
+    <tr><td>ETF NLR (Uranio & Nuclear)</td><td>Pershing</td><td class="right">13.06</td><td class="right">1.62%</td><td class="right"><span class="tag tag-green">+9.6%</span></td></tr>
+    <tr><td>ETF ICOP (Cobre & Metales)</td><td>Pershing</td><td class="right">15.53</td><td class="right">1.92%</td><td class="right"><span class="tag tag-green">+4.6%</span></td></tr>
+    <tr><td>ETF CIBR (Ciberseguridad)</td><td>Pershing</td><td class="right">11.66</td><td class="right">1.44%</td><td class="right"><span class="tag tag-green">+7.6%</span></td></tr>
     <tr><td colspan="5" style="font-weight:500;font-size:12px;color:var(--muted);padding-top:12px">Emergentes / LatAm</td></tr>
-    <tr><td>Falcom Latam Equities</td><td>BTG</td><td class="right">20.22</td><td class="right">2.53%</td><td class="right"><span class="tag tag-green">+2.6%</span></td></tr>
+    <tr><td>Falcom Latam Equities</td><td>BTG</td><td class="right">20.03</td><td class="right">2.48%</td><td class="right"><span class="tag tag-green">+2.6%</span></td></tr>
     <tr><td colspan="5" style="font-weight:500;font-size:12px;color:var(--muted);padding-top:12px">Chile</td></tr>
-    <tr><td>Toesca Chile Equity</td><td>BTG</td><td class="right">45.08</td><td class="right">5.65%</td><td class="right"><span class="tag tag-green">+3.0%</span></td></tr>
-    <tr><td>LV Enfoque</td><td>BTG</td><td class="right">41.33</td><td class="right">5.18%</td><td class="right"><span class="tag tag-green">+4.9%</span></td></tr>
+    <tr><td>Toesca Chile Equity</td><td>BTG</td><td class="right">44.57</td><td class="right">5.52%</td><td class="right"><span class="tag tag-green">+3.0%</span></td></tr>
+    <tr><td>LV Enfoque</td><td>BTG</td><td class="right">40.74</td><td class="right">5.04%</td><td class="right"><span class="tag tag-green">+4.9%</span></td></tr>
     <tr class="subtotal"><td>Total renta variable</td><td></td><td class="right">235.30</td><td class="right">29.49%</td><td class="right"></td></tr>
   </tbody>
 </table>
@@ -305,10 +333,10 @@
     </tr>
   </thead>
   <tbody>
-    <tr><td>BCI Deuda Corp Estrategica</td><td>BCI</td><td class="right">158.22</td><td class="right">19.83%</td><td class="right"><span class="tag tag-green">+0.8%</span></td></tr>
-    <tr><td>Falcom Fixed Income Chile</td><td>BTG</td><td class="right">87.40</td><td class="right">10.95%</td><td class="right"><span class="tag tag-green">+1.3%</span></td></tr>
-    <tr><td>BTG Deuda Activa Plus</td><td>BTG</td><td class="right">76.56</td><td class="right">9.59%</td><td class="right"><span class="tag tag-green">+0.3%</span></td></tr>
-    <tr><td>PIMCO Income (USD)</td><td>Pershing</td><td class="right">40.43</td><td class="right">5.07%</td><td class="right"><span class="tag tag-green">+0.9%</span></td></tr>
+    <tr><td>BCI Deuda Corp Estrategica</td><td>BCI</td><td class="right">158.27</td><td class="right">19.60%</td><td class="right"><span class="tag tag-green">+0.8%</span></td></tr>
+    <tr><td>Falcom Fixed Income Chile</td><td>BTG</td><td class="right">87.48</td><td class="right">10.83%</td><td class="right"><span class="tag tag-green">+1.3%</span></td></tr>
+    <tr><td>BTG Deuda Activa Plus</td><td>BTG</td><td class="right">76.96</td><td class="right">9.53%</td><td class="right"><span class="tag tag-green">+0.3%</span></td></tr>
+    <tr><td>PIMCO Income (USD)</td><td>Pershing</td><td class="right">40.12</td><td class="right">4.97%</td><td class="right"><span class="tag tag-green">+0.9%</span></td></tr>
     <tr class="subtotal"><td>Total renta fija</td><td></td><td class="right">362.62</td><td class="right">45.44%</td><td class="right"></td></tr>
   </tbody>
 </table>
@@ -326,9 +354,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr><td>Compass Blackstone (Deuda Privada)</td><td>BTG</td><td class="right">72.24</td><td class="right">9.05%</td><td class="right"><span class="tag tag-red">-2.6%</span></td></tr>
-    <tr><td>Hamilton Lane Private Assets</td><td>Pershing</td><td class="right">45.15</td><td class="right">5.66%</td><td class="right"><span class="tag tag-red">-1.1%</span></td></tr>
-    <tr><td>ETF IBIT (Bitcoin)</td><td>Pershing</td><td class="right">7.71</td><td class="right">0.97%</td><td class="right"><span class="tag tag-green">+12.8%</span></td></tr>
+    <tr><td>Compass Blackstone (Deuda Privada)</td><td>BTG</td><td class="right">71.73</td><td class="right">8.88%</td><td class="right"><span class="tag tag-red">-2.6%</span></td></tr>
+    <tr><td>Hamilton Lane Private Assets</td><td>Pershing</td><td class="right">44.53</td><td class="right">5.51%</td><td class="right"><span class="tag tag-red">-1.1%</span></td></tr>
+    <tr><td>ETF IBIT (Bitcoin)</td><td>Pershing</td><td class="right">7.30</td><td class="right">0.90%</td><td class="right"><span class="tag tag-green">+12.8%</span></td></tr>
     <tr class="subtotal"><td>Total alternativos</td><td></td><td class="right">125.10</td><td class="right">15.68%</td><td class="right"></td></tr>
   </tbody>
 </table>
@@ -345,9 +373,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr><td>Caja USD</td><td>Pershing + BTG</td><td class="right">69.89</td><td class="right">8.76%</td></tr>
-    <tr><td>Caja CLP</td><td>BTG</td><td class="right">5.03</td><td class="right">0.63%</td></tr>
-    <tr class="subtotal"><td>Total caja</td><td></td><td class="right">74.91</td><td class="right">9.39%</td></tr>
+    <tr><td>Caja USD</td><td>Pershing + BTG</td><td class="right">68.74</td><td class="right">8.51%</td></tr>
+    <tr><td>Caja CLP</td><td>BTG</td><td class="right">5.54</td><td class="right">0.69%</td></tr>
+    <tr class="subtotal"><td>Total caja</td><td></td><td class="right">74.28</td><td class="right">9.20%</td></tr>
   </tbody>
 </table>
 
@@ -357,7 +385,7 @@
     <tr class="total">
       <td style="font-size:15px">Total portafolio</td>
       <td></td>
-      <td class="right" style="font-size:15px">MM$797.93</td>
+      <td class="right" style="font-size:15px">MM$807.55</td>
       <td class="right" style="font-size:15px">100%</td>
       <td></td>
     </tr>
@@ -370,18 +398,18 @@
 <div class="metrics">
   <div class="metric">
     <div class="label">Pershing (USD)</div>
-    <div class="value">MM$288.9</div>
-    <div class="sub">USD 319,907 | 36.2%</div>
+    <div class="value">MM$299.0</div>
+    <div class="sub">USD 335,666 | 37.0%</div>
   </div>
   <div class="metric">
     <div class="label">BTG Pactual (CLP)</div>
-    <div class="value">MM$350.8</div>
-    <div class="sub">44.0%</div>
+    <div class="value">MM$350.3</div>
+    <div class="sub">43.4%</div>
   </div>
   <div class="metric">
     <div class="label">BCI Banca Privada (CLP)</div>
-    <div class="value">MM$158.2</div>
-    <div class="sub">19.8%</div>
+    <div class="value">MM$158.3</div>
+    <div class="sub">19.6%</div>
   </div>
 </div>
 
@@ -389,18 +417,18 @@
 <div class="section-title">Nota sobre creditos BCI</div>
 
 <div class="note-box">
-  <strong>Creditos comerciales BCI:</strong> La cuenta BCI tiene colocaciones por $273.6M CLP (dos creditos de $150M, tasa ~0.66-0.70% mensual). Estos creditos fueron otorgados para financiar operaciones de empresas relacionadas, las cuales garantizan el pago y estan pagando un spread de +2% sobre el costo de financiamiento. La renta fija en BCI sirve de garantia colateral. <strong>Estos creditos estan aislados del analisis de rentabilidad del portafolio de inversiones</strong> porque su riesgo y retorno corresponden a la operacion de las empresas, no al portafolio.
+  <strong>Creditos comerciales BCI:</strong> La cuenta BCI tiene colocaciones por $269.7M CLP (dos creditos de $150M, tasa ~0.66-0.70% mensual). Estos creditos fueron otorgados para financiar operaciones de empresas relacionadas, las cuales garantizan el pago y estan pagando un spread de +2% sobre el costo de financiamiento. La renta fija en BCI sirve de garantia colateral. <strong>Estos creditos estan aislados del analisis de rentabilidad del portafolio de inversiones</strong> porque su riesgo y retorno corresponden a la operacion de las empresas, no al portafolio.
 </div>
 
 <!-- CONTEXTO DE MERCADO -->
-<div class="section-title">Contexto de mercado — Abril 2026</div>
+<div class="section-title">Contexto de mercado — Mayo 2026</div>
 
 <div class="note-box">
-  <strong>Mercados globales:</strong> Abril fue un mes fuerte para activos de riesgo, especialmente tecnologia. Los semiconductores (SMH +32%) y la tematica AI (WTAI +26%, QQQ +16%) lideraron la recuperacion despues de un Q1 debil. Bitcoin tambien recupero terreno (+13%). En Chile, la renta variable local tuvo un desempeno positivo moderado (Toesca +3%, LV Enfoque +5%). El peso chileno se aprecio 2.6% contra el dolar, pasando de $927 a $903, lo que redujo el impacto positivo de las posiciones en USD al consolidar en pesos.
+  <strong>Mercados globales:</strong> Mayo continuo con momentum positivo en tecnologia. Ciberseguridad (CIBR +32%) y AI (WTAI +24%, SMH +18%) lideraron las alzas. Nasdaq (QQQ +11%) y cobre (ICOP +10%) tambien registraron avances solidos. Bitcoin corrigio levemente (IBIT -4%) y uranio cedio terreno (NLR -9%). En Chile, la renta variable local tuvo retornos mixtos con leves bajas (Toesca -1%, LV Enfoque -1%). El peso chileno se aprecio 1.4% contra el dolar, pasando de $903 a $891, reduciendo marginalmente la rentabilidad en pesos de las posiciones en USD.
 </div>
 
 <div class="footer">
-  Inversiones y Rentas S3 Limitada | RUT 76.161.776-1 | Reporte generado el 19 de mayo 2026<br>
+  Inversiones y Rentas S3 Limitada | RUT 76.161.776-1 | Reporte generado el 12 de junio 2026<br>
   Este reporte es solo informativo y no constituye asesoria de inversion.
 </div>
 
@@ -417,7 +445,7 @@ new Chart(document.getElementById('allocChart'), {
   data: {
     labels: ['Renta variable', 'Renta fija', 'Alternativos', 'Caja'],
     datasets: [
-      { label: 'Actual', data: [29.5, 45.4, 15.7, 9.4], backgroundColor: '#534AB7', borderRadius: 4, barPercentage: 0.55 },
+      { label: 'Actual', data: [30.6, 44.9, 15.3, 9.2], backgroundColor: '#534AB7', borderRadius: 4, barPercentage: 0.55 },
       { label: 'Target', data: [30, 40, 30, 0], backgroundColor: 'rgba(83,74,183,0.12)', borderColor: '#534AB7', borderWidth: 1, borderDash: [4,4], borderRadius: 4, barPercentage: 0.55 }
     ]
   },
@@ -435,9 +463,9 @@ new Chart(document.getElementById('allocChart'), {
 new Chart(document.getElementById('evolChart'), {
   type: 'line',
   data: {
-    labels: ['Dic 25', 'Ene 26', 'Feb 26', 'Mar 26', 'Abr 26'],
+    labels: ['Dic 25', 'Ene 26', 'Feb 26', 'Mar 26', 'Abr 26', 'May 26'],
     datasets: [{
-      data: [780.9, 774.3, 773.3, 782.5, 797.9],
+      data: [780.9, 774.3, 773.3, 782.5, 797.9, 807.6],
       borderColor: '#534AB7', backgroundColor: 'rgba(83,74,183,0.06)',
       fill: true, tension: 0.35, pointRadius: 5, pointBackgroundColor: '#534AB7', borderWidth: 2
     }]
@@ -449,7 +477,7 @@ new Chart(document.getElementById('evolChart'), {
     },
     scales: {
       x: { ticks: { color: textColor }, grid: { display: false } },
-      y: { ticks: { color: textColor, callback: v => 'MM$' + v }, grid: { color: gridColor }, min: 760, max: 810 }
+      y: { ticks: { color: textColor, callback: v => 'MM$' + v }, grid: { color: gridColor }, min: 760, max: 820 }
     }
   }
 });
@@ -460,7 +488,7 @@ new Chart(document.getElementById('custodioChart'), {
   data: {
     labels: ['Pershing USD', 'Pershing CLP', 'BTG', 'BCI'],
     datasets: [{
-      data: [6.46, 3.66, 1.11, 0.84],
+      data: [4.93, 3.48, -0.14, 0.03],
       backgroundColor: ['#534AB7', '#1D9E75', '#3266ad', '#D85A30'],
       borderRadius: 4, barPercentage: 0.5
     }]
@@ -469,10 +497,10 @@ new Chart(document.getElementById('custodioChart'), {
     responsive: true, maintainAspectRatio: false,
     indexAxis: 'y',
     plugins: { legend: { display: false },
-      tooltip: { callbacks: { label: ctx => '+' + ctx.parsed.x.toFixed(2) + '%' } }
+      tooltip: { callbacks: { label: ctx => (ctx.parsed.x >= 0 ? '+' : '') + ctx.parsed.x.toFixed(2) + '%' } }
     },
     scales: {
-      x: { ticks: { color: textColor, callback: v => '+' + v + '%' }, grid: { color: gridColor } },
+      x: { ticks: { color: textColor, callback: v => (v >= 0 ? '+' : '') + v + '%' }, grid: { color: gridColor } },
       y: { ticks: { color: textColor, font: { size: 12 } }, grid: { display: false } }
     }
   }
@@ -495,6 +523,118 @@ new Chart(document.getElementById('moversChart'), {
     scales: {
       x: { ticks: { color: textColor, font: { size: 11 }, maxRotation: 45, autoSkip: false }, grid: { display: false } },
       y: { ticks: { color: textColor, callback: v => (v >= 0 ? '+' : '') + v + '%' }, grid: { color: gridColor } }
+    }
+  }
+});
+
+// FX Attribution Waterfall Chart
+new Chart(document.getElementById('fxWaterfallChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May'],
+    datasets: [
+      {
+        label: 'Retorno Inversiones',
+        data: [0.59, -0.32, -0.57, 2.98, 1.74],
+        backgroundColor: '#534AB7',
+        borderRadius: 4,
+        barPercentage: 0.7,
+        categoryPercentage: 0.8,
+        order: 2
+      },
+      {
+        label: 'Efecto Cambiario',
+        data: [-1.21, 0.19, 1.67, -1.01, -0.53],
+        backgroundColor: '#D85A30',
+        borderRadius: 4,
+        barPercentage: 0.7,
+        categoryPercentage: 0.8,
+        order: 2
+      },
+      {
+        label: 'Retorno Total CLP',
+        data: [-0.62, -0.13, 1.10, 1.97, 1.21],
+        type: 'line',
+        borderColor: '#1D9E75',
+        backgroundColor: 'transparent',
+        borderWidth: 2.5,
+        pointBackgroundColor: '#1D9E75',
+        pointRadius: 5,
+        tension: 0.3,
+        order: 1
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: function(ctx) {
+            var v = ctx.parsed.y;
+            return ctx.dataset.label + ': ' + (v >= 0 ? '+' : '') + v.toFixed(2) + '%';
+          }
+        }
+      }
+    },
+    scales: {
+      x: {
+        stacked: true,
+        ticks: { color: textColor },
+        grid: { display: false }
+      },
+      y: {
+        stacked: true,
+        ticks: {
+          color: textColor,
+          callback: function(v) { return (v >= 0 ? '+' : '') + v + '%'; }
+        },
+        grid: { color: gridColor }
+      }
+    }
+  }
+});
+
+// FX Rate Evolution Chart
+new Chart(document.getElementById('fxRateChart'), {
+  type: 'line',
+  data: {
+    labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May'],
+    datasets: [{
+      data: [865, 871, 927, 903, 891],
+      borderColor: '#D85A30',
+      backgroundColor: 'rgba(216,90,48,0.1)',
+      fill: true,
+      borderWidth: 2.5,
+      pointBackgroundColor: '#D85A30',
+      pointRadius: 5,
+      tension: 0.3
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: function(ctx) { return '$' + ctx.parsed.y; }
+        }
+      }
+    },
+    scales: {
+      x: { ticks: { color: textColor }, grid: { display: false } },
+      y: {
+        ticks: {
+          color: textColor,
+          callback: function(v) { return '$' + v; }
+        },
+        grid: { color: gridColor },
+        min: 840,
+        max: 950
+      }
     }
   }
 });
