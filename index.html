@@ -174,9 +174,63 @@
   }
   .tag-green { background: var(--green-bg); color: var(--green); }
   .tag-red { background: var(--red-bg); color: var(--red); }
+
+  /* --- barra de navegacion mensual --- */
+  .monthnav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 1.75rem;
+    padding: 5px;
+    background: var(--card);
+    border: 0.5px solid var(--border);
+    border-radius: 12px;
+  }
+  .monthnav .nav-label {
+    font-size: 11px;
+    color: var(--hint);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0 8px 0 6px;
+  }
+  .monthnav a {
+    padding: 6px 15px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .monthnav a:hover { background: var(--accent-light); color: var(--text); }
+  .monthnav a.active { background: var(--accent); color: #ffffff; }
+  .monthnav a.year {
+    margin-left: auto;
+    color: var(--accent);
+    border: 0.5px solid var(--border);
+  }
+  .monthnav a.year.active { color: #ffffff; border-color: transparent; }
+  @media (max-width: 640px) {
+    .monthnav .nav-label { display: none; }
+    .monthnav a.year { margin-left: 0; }
+  }
 </style>
 </head>
 <body>
+
+<!-- NAV MENSUAL -->
+<nav class="monthnav">
+  <span class="nav-label">2026</span>
+  <a href="2026-04.html" title="Abril 2026">Abr</a>
+  <a href="2026-05.html" title="Mayo 2026">May</a>
+  <a href="2026-06.html" title="Junio 2026">Jun</a>
+  <a href="2026-07.html" title="Julio 2026">Jul</a>
+  <a href="index.html" class="active" aria-current="page" title="Agosto 2026">Ago</a>
+  <a href="evolucion-2026.html" class="year">Evolucion 2026</a>
+</nav>
+<!-- /NAV MENSUAL -->
 
 <div class="header">
   <div>
@@ -202,8 +256,8 @@
   </div>
   <div class="metric">
     <div class="label">Rentabilidad YTD</div>
-    <div class="value positive">+5.11%</div>
-    <div class="sub">+MM$51.4 desde dic 2025</div>
+    <div class="value positive">+7.43%</div>
+    <div class="sub">+MM$58.1 desde dic 2025</div>
   </div>
   <div class="metric">
     <div class="label">Pershing en USD</div>
@@ -217,13 +271,13 @@
   </div>
   <div class="metric">
     <div class="label">Efecto Cambiario YTD</div>
-    <div class="value positive">+0.5%</div>
-    <div class="sub">Inversiones +4.6% / FX +0.5%</div>
+    <div class="value positive">+0.85%</div>
+    <div class="sub">Inversiones +6.58% / FX +0.85%</div>
   </div>
 </div>
 
 <div class="note-box">
-  <strong>Efecto cambiario:</strong> En agosto, las inversiones subieron +1.9% en moneda local, y el dolar subio 0.5% (de $928 a $933), sumando +0.2% al consolidado para un retorno total de +2.12%. En lo que va del año, las inversiones puras rinden +4.6%, y el efecto cambiario suma +0.5%, dejando un retorno total de +5.11% en CLP.
+  <strong>Efecto cambiario:</strong> En agosto, las inversiones subieron +1.9% en moneda local, y el dolar subio 0.5% (de $928 a $933), sumando +0.2% al consolidado para un retorno total de +2.12%. En lo que va del año, las inversiones puras rinden +6.58%, y el efecto cambiario suma +0.85%, dejando un retorno total de +7.43% en CLP.
 </div>
 
 <div class="note-box" style="border-left-color: var(--coral)">
